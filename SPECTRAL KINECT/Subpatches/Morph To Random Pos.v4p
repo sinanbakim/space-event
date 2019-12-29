@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\clone\Documents\CLONEPRODUCTION\PROJECT\_CLONEPRODUCTION-CLN\20- SPECTRAL KINECT\SPECTRAL KINECT\Subpatches\Morph To Random Pos.v4p" systemname="Morph To Random Pos" filename="C:\Users\clone\Documents\CLONEPRODUCTION\PROJECT\_CLONEPRODUCTION-CLN\20- SPECTRAL KINECT\SPECTRAL KINECT\Subpatches\Morph To Random Pos.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\Users\Sincap\Documents\GitHub\space-event\SPECTRAL KINECT\Subpatches\Morph To Random Pos.v4p" systemname="Morph To Random Pos" filename="C:\Users\clone\Documents\CLONEPRODUCTION\PROJECT\_CLONEPRODUCTION-CLN\20- SPECTRAL KINECT\SPECTRAL KINECT\Subpatches\Morph To Random Pos.v4p" scrollx="204" scrolly="552">
    <NODE systemname="InputMorph (Value)" nodename="InputMorph (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="930" top="5670" width="4365" height="270">
    </BOUNDS>
@@ -36,7 +36,7 @@
    <PIN pinname="Input 2" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <NODE systemname="R (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="3">
+   <NODE systemname="R (VALUE ADVANCED)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="3210" top="1890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" encoded="0" values="HeadPOS">
@@ -45,6 +45,8 @@
    </PIN>
    <BOUNDS type="Box" left="3210" top="1890">
    </BOUNDS>
+   <PIN pinname="Display Channel" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="1350" top="4125" width="100" height="100">
@@ -85,7 +87,7 @@
    </PIN>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="5">
+   <PIN pinname="FilterTime" slicecount="1" values="0.28">
    </PIN>
    </NODE>
    <NODE systemname="SphericalSpread (Spreads)" filename="%VVVV%\addonpack\lib\nodes\plugins\SphericalSpread.dll" nodename="SphericalSpread (Spreads)" componentmode="Hidden" id="8">
@@ -165,10 +167,10 @@
    </PIN>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="5">
+   <PIN pinname="FilterTime" slicecount="1" values="0.19">
    </PIN>
    </NODE>
-   <NODE systemname="Resample (3d Vector)" filename="%VVVV%\lib\nodes\modules\3D\Resample (3D Vector).v4p" nodename="Resample (3d Vector)" componentmode="Hidden" id="15">
+   <NODE systemname="Resample (3d Vector Legacy)" filename="%VVVV%\lib\nodes\modules\3D\Resample (3D Vector).v4p" nodename="Resample (3d Vector)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="5490" top="4200" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Count" slicecount="1" values="504">
@@ -210,6 +212,8 @@
    <PIN pinname="Go To Position" visible="1">
    </PIN>
    <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="0.16">
    </PIN>
    </NODE>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="19">
@@ -342,6 +346,10 @@
    </LINK>
    <LINK srcnodeid="18" srcpinname="Position Out" dstnodeid="20" dstpinname="Go To Position">
    </LINK>
-   <BOUNDS type="Window" left="20550" top="5340" width="7005" height="8220">
+   <BOUNDS type="Window" left="13356" top="1488" width="6996" height="8220">
    </BOUNDS>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <PACK Name="addonpack" Version="39.0.0">
+   </PACK>
    </PATCH>

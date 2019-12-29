@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\clone\Documents\CLONEPRODUCTION\PROJECT\_CLONEPRODUCTION-CLN\20- SPECTRAL KINECT\SPECTRAL KINECT\Subpatches\PostFX.v4p" systemname="PostFX" filename="C:\Users\clone\Documents\CLONEPRODUCTION\PROJECT\_CLONEPRODUCTION-CLN\20- SPECTRAL KINECT\SPECTRAL KINECT\Subpatches\PostFX.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\Users\Sincap\Documents\GitHub\space-event\SPECTRAL KINECT\Subpatches\PostFX.v4p" systemname="PostFX" filename="C:\Users\clone\Documents\CLONEPRODUCTION\PROJECT\_CLONEPRODUCTION-CLN\20- SPECTRAL KINECT\SPECTRAL KINECT\Subpatches\PostFX.v4p" scrollx="144" scrolly="504">
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Blur\Blur (EX9.Texture Filter).v4p" id="3" nodename="Blur (EX9.Texture Filter)" systemname="Blur (EX9.Texture Filter)">
    <BOUNDS height="100" left="2655" top="1170" type="Node" width="100">
    </BOUNDS>
@@ -12,6 +12,8 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    <BOUNDS type="Box" left="2655" top="1170">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6012" top="3972" width="11160" height="10140">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Distort\Distort (EX9.Texture Filter).v4p" id="4" nodename="Distort (EX9.Texture Filter)" systemname="Distort (EX9.Texture Filter)">
@@ -55,7 +57,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="| Lighten|">
+   <PIN pinname="Mode" slicecount="1" values="Lighten">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
@@ -153,7 +155,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="| Screen|">
+   <PIN pinname="Mode" slicecount="1" values="Screen">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="24" dstpinname="Input 2">
@@ -169,7 +171,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="| Lighten|">
+   <PIN pinname="Mode" slicecount="1" values="Lighten">
    </PIN>
    <PIN pinname="Opacity" slicecount="1" values="1">
    </PIN>
@@ -217,7 +219,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="| Add|">
+   <PIN pinname="Mode" slicecount="1" values="Add">
    </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="35" dstpinname="Input 2">
@@ -225,7 +227,7 @@
    <NODE systemname="Blend (EX9.Texture Mixer)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Mixer\Blend\Blend (EX9.Texture Mixer).v4p" nodename="Blend (EX9.Texture Mixer)" componentmode="Hidden" id="36">
    <BOUNDS type="Node" left="405" top="2670" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Mode" slicecount="1" values="| Add|">
+   <PIN pinname="Mode" slicecount="1" values="Add">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -253,6 +255,8 @@
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="40">
    <BOUNDS type="Node" left="4605" top="4425" width="100" height="100">
@@ -268,7 +272,7 @@
    <PIN pinname="ScaleX" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="41">
+   <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="41">
    <BOUNDS type="Node" left="4410" top="5445" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4410" top="5445" width="2400" height="1800">
@@ -279,6 +283,8 @@
    </PIN>
    <PIN pinname="EX9 Out" visible="1">
    </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="40" srcpinname="Transform Out" dstnodeid="37" dstpinname="Transform">
    </LINK>
@@ -287,13 +293,11 @@
    <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="42">
    <BOUNDS type="Node" left="4965" top="5910" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Source" visible="1">
+   <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="41" srcpinname="EX9 Out" dstnodeid="42" dstpinname="Source">
-   </LINK>
    <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="4755" top="2970" width="100" height="100">
    </BOUNDS>
@@ -312,6 +316,8 @@
    <PIN pinname="Period" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Pause" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="46">
@@ -335,7 +341,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="| Add|">
+   <PIN pinname="Mode" slicecount="1" values="Add">
    </PIN>
    <PIN pinname="Opacity" slicecount="1" values="0.31">
    </PIN>
@@ -437,6 +443,8 @@
    </PIN>
    <PIN pinname="Width" slicecount="1" values="0.14">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Texture Out" dstnodeid="54" dstpinname="Input">
    </LINK>
@@ -504,6 +512,8 @@
    <PIN pinname="Period" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Pause" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="68">
@@ -602,4 +612,28 @@
    </LINK>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="40" dstpinname="ScaleX">
    </LINK>
+   <LINK srcnodeid="41" srcpinname="EX9 Out" dstnodeid="42" dstpinname="Source">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="79">
+   <BOUNDS type="Node" left="6876" top="1068" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6876" top="1068" width="444" height="408">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|sparkling on/off|">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Enabled">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <PACK Name="addonpack" Version="39.0.0">
+   </PACK>
    </PATCH>

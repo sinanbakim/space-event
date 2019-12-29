@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
-   <PATCH nodename="C:\vvvv\Projects\space-event\SPECTRAL KINECT\Subpatches\RangeSplitter.v4p" scrollx="0" scrolly="720" systemname="RangeSplitter" filename="C:\vvvv\Projects\space-event\Experiments\RangeSplitter.v4p">
-   <BOUNDS type="Window" left="270" top="5250" width="10725" height="9000">
+   <PATCH nodename="C:\Users\Sincap\Documents\GitHub\space-event\SPECTRAL KINECT\Subpatches\RangeSplitter.v4p" scrollx="0" scrolly="4224" systemname="RangeSplitter" filename="C:\vvvv\Projects\space-event\Experiments\RangeSplitter.v4p">
+   <BOUNDS type="Window" left="216" top="6252" width="10716" height="5988">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="1935" top="1395" width="100" height="100">
@@ -559,21 +559,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4860" top="7665" width="4800" height="4800">
    </BOUNDS>
-   <BOUNDS type="Window" left="6375" top="3060" width="9000" height="9000">
-   </BOUNDS>
-   <PIN pinname="In-Type" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Range-Type" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="OSCRangeTransmitter" filename="OSCRangeTransmitter.v4p" componentmode="Hidden" id="68" nodename="OSCRangeTransmitter.v4p">
-   <BOUNDS type="Node" left="7170" top="7650" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7170" top="7650" width="4800" height="4800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="6375" top="3060" width="9000" height="9000">
+   <BOUNDS type="Window" left="6420" top="2448" width="9000" height="9000">
    </BOUNDS>
    <PIN pinname="In-Type" visible="1" slicecount="1" values="||">
    </PIN>
@@ -586,13 +572,9 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="66" dstpinname="In-Type">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="68" dstpinname="In-Type">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="64" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="66" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="68" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="70">
    <BOUNDS type="Box" left="975" top="7095" width="795" height="240">
@@ -662,9 +644,7 @@
    </LINK>
    <LINK srcnodeid="72" srcpinname="Output String" dstnodeid="66" dstpinname="Range-Type">
    </LINK>
-   <LINK srcnodeid="73" srcpinname="Output String" dstnodeid="68" dstpinname="Range-Type">
-   </LINK>
-   <NODE systemname="OSCRangeTransmitter" filename="OSCRangeTransmitter.v4p" nodename="OSCRangeTransmitter.v4p" componentmode="InAWindow" id="74">
+   <NODE systemname="OSCRangeTransmitter" filename="OSCRangeTransmitter.v4p" nodename="OSCRangeTransmitter.v4p" componentmode="Hidden" id="74">
    <BOUNDS type="Node" left="240" top="7650" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Range-Type" visible="1">
@@ -673,6 +653,8 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="10788" top="2136" width="9000" height="9000">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="70" srcpinname="Output String" dstnodeid="74" dstpinname="Range-Type">
    </LINK>
@@ -680,4 +662,26 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="74" dstpinname="Input">
    </LINK>
+   <NODE id="68" componentmode="InAWindow" systemname="OSCRangeTransmitter" filename="OSCRangeTransmitter.v4p" nodename="OSCRangeTransmitter.v4p">
+   <BOUNDS type="Window" left="8388" top="3216" width="9000" height="9000">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7170" top="7650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7170" top="7650" width="4800" height="4800">
+   </BOUNDS>
+   <PIN pinname="In-Type" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Range-Type" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Output String" dstnodeid="68" dstpinname="Range-Type">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="68" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="68" dstpinname="In-Type">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>
